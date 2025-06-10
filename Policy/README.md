@@ -75,6 +75,7 @@ This keeps things organized and avoids naming conflicts across your Conjur polic
 *  Keep each nested policy small and focused
 *  Avoid deeply nested policies unless necessary
 *  Use version control for all your policy files
+*  Store each policy file in a folder that matches the policy it defines. For example, a policy named webapp should be saved in policies/webapp/webapp.yml to reflect its location in the policy tree.
 
 ---
 

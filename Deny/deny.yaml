@@ -1,0 +1,4 @@
+- !deny
+  resource: !<kind-of-resource> <resource-name>
+  privileges: [ <privilege>, <privilege>]
+  role: !<kind-of-role> <role-name>
