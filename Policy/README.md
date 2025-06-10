@@ -1,0 +1,96 @@
+# Conjur Policy Guide: `!policy` Statement
+
+## Overview
+
+The `!policy` statement defines a **nested policy** within a parent policy. Think of it as creating a namespace, similar to how Kubernetes uses namespaces to isolate and organize resources.
+
+In Conjur, a policy acts as a **namespace-like container** for users, groups, roles, and other elements. This structure:
+
+* Scopes all resources defined within the policy.
+* Prevents naming collisions.
+* Helps organize policies by application, team, or function.
+* Allows fully-qualified references (e.g., `webapp/alice`, `webapp/app-users`).
+
+This makes your secret management structure modular, clean, and maintainable.
+
+---
+
+## When to Use `!policy`
+
+Use `!policy` when you want to:
+
+* Create a logical namespace (e.g., for an application or team)
+* Organize related policy elements in a clean, readable way
+* Break policies into smaller, modular files
+* Improve long-term maintainability
+
+---
+
+## Example
+
+```yaml
+- !policy
+  id: webapp
+  owner: !group security-admins
+  body:
+    - !group app-users
+    - !user alice
+    - !grant
+      role: !group app-users
+      member: !user alice
+```
+
+### What this does:
+
+* Creates a sub-policy named `webapp`
+* Makes `security-admins` the owner of the new policy
+* Defines a group called `app-users`
+* Creates a user named `alice`
+* Adds `alice` to the `app-users` group
+
+Once loaded, these resources can be referenced as:
+
+* `webapp/app-users`
+* `webapp/alice`
+
+---
+
+## How It Works
+
+The `!policy` block creates a new namespace under the current policy. All items inside `body` live within that namespace.
+
+When you reference these resources elsewhere (e.g., in a `!permit` rule), use the fully-qualified name:
+
+```yaml
+resource: webapp/app-users
+```
+
+This keeps things organized and avoids naming conflicts across your Conjur policy ecosystem.
+
+---
+
+## Best Practices
+
+*  Use short, meaningful policy IDs (e.g., `webapp`, `infra`, `ci`)
+*  Keep each nested policy small and focused
+*  Avoid deeply nested policies unless necessary
+*  Use version control for all your policy files
+
+---
+
+## Loading a Policy
+
+To load this policy:
+
+```bash
+conjur policy load -b root -f webapp.yml
+```
+
+This creates a `webapp` namespace under the root policy.
+
+---
+
+
+## Additional Resources
+
+* 📖 [Official Documentation – `!policy`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-policy.htm)
