@@ -1,0 +1,5 @@
+- !group
+  id: <group-name>
+  owner: !<kind-of-role> <role-name>  
+  annotations: 
+    editable: true | false 

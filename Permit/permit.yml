@@ -1,0 +1,4 @@
+- !permit
+    role: !<kind-of-role> <role-name>
+    privileges: [x,y,z]
+    resource: !<kind-of-resource> <resource-name>

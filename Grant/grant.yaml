@@ -1,0 +1,5 @@
+- !grant
+  role: !<kind-of-role> <role-name>    #Granting role.
+  members:                             #Recipient roles.
+    - !<kind-of-role> <role-name>
+    - !<kind-of-role> <role-name>

@@ -1,0 +1,5 @@
+- !host
+  id: <name>
+  owner: !<kind-of-role> <role-name>
+  annotations:
+    <key>: <value>
