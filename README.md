@@ -1,4 +1,4 @@
-# Conjur Policy Primer
+# Conjur Policy Reference Guide
 
 This guide gives you a central reference for working with Conjur policies—covering basic concepts, structure, syntax, and how to load them. It's designed for DevOps engineers who are starting with secrets management in Conjur.
 
