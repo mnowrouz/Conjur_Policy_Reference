@@ -1,0 +1,6 @@
+- !variable
+  id: <name>
+  kind: <description>
+  mime_type:
+  annotations: 
+    <key>: <value>

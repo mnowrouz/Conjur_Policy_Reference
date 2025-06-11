@@ -1,0 +1,3 @@
+- !webservice
+  id: <name>
+  owner: !<kind-of-role> <role-name>
