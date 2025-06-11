@@ -49,7 +49,7 @@ conjur policy load -b <branch-id> -f <file>.yml
 
 - `<branch-id>` is the namespace (e.g., `root`, `app`, `authn-jwt`)
 - Loading applies all creations, grants, permits, and revocations in the file
-- “Load” is used for additive or destructive changes like `!grant`, `!permit`, etc.
+- “Load” is used for additive changes like `!grant`, `!permit`, etc.
 - "Update" is used for both additive and destructive changes like `!revoke`, `!delete`, etc.
 - For patches (like idempotent replaces), you can use flags like `--replace` (but that goes beyond the basics) - be careful using `--replace` on policies with hosts that use API keys as it will create a new instance of that host
 
