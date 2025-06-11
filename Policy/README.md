@@ -62,7 +62,7 @@ The `!policy` block creates a new namespace under the current policy. All items 
 When you reference these resources elsewhere (e.g., in a `!permit` rule), use the fully-qualified name:
 
 ```yaml
-resource: webapp/app-users
+!group: webapp/app-users
 ```
 
 This keeps things organized and avoids naming conflicts across your Conjur policy ecosystem.
