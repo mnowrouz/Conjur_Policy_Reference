@@ -77,14 +77,15 @@ conjur policy load -b <branch-id> -f <file>.yml
 
 After digesting this primer, dive into specific statement guides below:
 
-- [`!policy`](./policy.md)
-- [`!group`](./group.md)
-- [`!user`](./user.md)
-- [`!host`](./host.md)
-- [`!variable`](./variable.md)
-- [`!webservice`](./webservice.md)
-- [`!grant` / `!revoke`](./grant.md)
-- [`!permit` / `!deny`](./permit.md)
+- [`!policy`](https://github.com/mnowrouz/Conjur_Policy_Reference/tree/main/Policy)
+- [`!group`](https://github.com/mnowrouz/Conjur_Policy_Reference/tree/main/Group)
+- [`!host`](https://github.com/mnowrouz/Conjur_Policy_Reference/tree/main/Host)
+- [`!variable`](https://github.com/mnowrouz/Conjur_Policy_Reference/tree/main/Variable)
+- [`!webservice`](https://github.com/mnowrouz/Conjur_Policy_Reference/tree/main/Webservice)
+- [`!grant`](https://github.com/mnowrouz/Conjur_Policy_Reference/tree/main/Grant)
+- [`!revoke`](https://github.com/mnowrouz/Conjur_Policy_Reference/tree/main/Revoke)
+- [`!permit`](https://github.com/mnowrouz/Conjur_Policy_Reference/tree/main/Permit)
+- [`!deny`](https://github.com/mnowrouz/Conjur_Policy_Reference/tree/main/Deny)
 
 ---
 
