@@ -36,7 +36,7 @@ Use `!variable` when you:
 
 In Conjur, variables represent named secrets. Once a `!variable` is declared, it must be:
 
-1. Assigned a value (e.g., using `conjur variable values add`)
+1. Assigned a value (e.g., using `conjur variable set -i db/password -v Cyberark1`)
 2. Accessed via authorized roles (e.g., hosts or users granted `read` and `execute` privileges)
 
 If a variable is declared in policy but no value is assigned or no access is granted, it remains inert.
