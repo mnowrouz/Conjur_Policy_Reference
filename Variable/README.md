@@ -76,12 +76,12 @@ These provide centralized management, credential rotation, and access control �
 To apply a policy containing variable declarations:
 
 ```bash
-conjur policy load -b app -f variables.yml
+conjur policy load -b dev/app -f variables.yml
 ```
 
 ---
 
 ## Additional Resources
 
-- 📖 [Official Documentation – `!variable`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-variable.htm)
-- 📖 [CyberArk Synchronizer Overview](https://docs.cyberark.com/ConjurCloud/Latest/en/Content/Integrations/cybr-pcloud-sync.htm)
+- [Official Documentation – `!variable`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-variable.htm)
+- [CyberArk Synchronizer Overview](https://docs.cyberark.com/ConjurCloud/Latest/en/Content/Integrations/cybr-pcloud-sync.htm)

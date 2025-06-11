@@ -63,15 +63,10 @@ To apply a policy with a `!webservice` declaration:
 conjur policy load -b root -f webservice.yml
 ```
 
-Or to a sub-policy branch:
-
-```bash
-conjur policy load -b authn-jwt -f dev-webservice.yml
-```
 
 ---
 
 ## Additional Resources
 
-- 📖 [Official Documentation – `!webservice`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-webservice.htm)
-- 📖 [Conjur JWT Authenticator Overview](https://docs.cyberark.com/ConjurCloud/Latest/en/Content/Integrations/JWT/jwt-authn-overview.htm)
+- [Official Documentation – `!webservice`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-webservice.htm)
+- [Conjur JWT Authenticator Overview](https://docs.cyberark.com/ConjurCloud/Latest/en/Content/Integrations/JWT/jwt-authn-overview.htm)

@@ -64,4 +64,4 @@ This will remove the specified role membership from the `app` policy branch.
 
 ## Additional Resources
 
-- 📖 [Official Documentation – `!revoke`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-revoke.htm)
+- [Official Documentation – `!revoke`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-revoke.htm)
