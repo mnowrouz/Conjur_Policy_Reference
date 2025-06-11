@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `!group` statement in Conjur is used to **define a role that can contain other roles**, typically users. Groups are commonly used to manage permissions collectively — you assign privileges to a group, and all users in that group inherit those privileges.
+The `!group` statement in Conjur is used to **define a role that can contain other roles**, typically users, but can also be used for hosts. Groups are commonly used to manage permissions collectively — you assign privileges to a group, and all users in that group inherit those privileges.
 
 Groups are a foundational building block for managing access at scale.
 
@@ -49,7 +49,7 @@ Groups make it easy to manage access based on shared responsibilities instead of
 * Use groups to reflect team roles (e.g., `dev-team`, `qa-users`, `admins`)
 * Create separate groups for read-only, admin, and CI/CD access
 * Place group definitions in their own policy file (e.g., `groups.yml`)
-* Keep group files in the same folder as the policy namespace they belong to (e.g., `policies/webapp/groups.yml`)
+* Keep group files in the same folder as the policy namespace they belong to (e.g., `dev/webapp/groups.yml`)
 
 ---
 
@@ -64,11 +64,11 @@ conjur policy load -b root -f groups.yml
 Or for a nested policy:
 
 ```bash
-conjur policy load -b webapp -f groups.yml
+conjur policy load -b dev/webapp -f groups.yml
 ```
 
 ---
 
 ## Additional Resources
 
-* 📖 [Official Documentation – `!group`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-group.htm)
+* [Official Documentation – `!group`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-group.htm)

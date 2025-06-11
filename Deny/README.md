@@ -52,7 +52,7 @@ This statement takes effect immediately upon policy update and **overrides any p
 * Prefer `!deny` over removing a `!permit` when you want to audit or temporarily block access
 * Always reference the full resource path, especially if defined in a nested policy
 * Store deny policies in a clearly named file (e.g., `deny-access.yml`)
-* Place deny policy files in the same folder as the policy they modify (e.g., `policies/webapp/deny-access.yml`)
+* Place deny policy files in the same folder as the policy they modify (e.g., `prod/webapp/deny-access.yml`)
 
 ---
 
@@ -67,7 +67,7 @@ conjur policy update -b root -f deny-access.yml
 Or for a nested policy:
 
 ```bash
-conjur policy update -b webapp -f deny-access.yml
+conjur policy update -b prod/webapp -f deny-access.yml
 ```
 
 ---

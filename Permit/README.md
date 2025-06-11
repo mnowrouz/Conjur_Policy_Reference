@@ -11,7 +11,7 @@ The `!permit` statement is used to explicitly **grant access** to a role. In Con
 Use `!permit` when you want to:
 
 - Grant a user, host, or group permission to access a resource
-- Allow a CI/CD pipeline (host) to read a secret
+- Allow a host (i.e. CI/CD pipeline) to retrieve a secret
 - Delegate permission to execute a service or command in a controlled way
 
 ---
@@ -52,7 +52,7 @@ In most use cases:
 - Use group or layer roles in `!permit` statements to avoid granting permissions directly to individual users or hosts
 - Keep permission grants close to the resource definition in your policy structure
 - Use least privilege: grant only the minimum required privileges to each role
-- Store `!permit` statements in the same policy folder as the resource they apply to (e.g., in `policies/app/permissions.yml`)
+- Store `!permit` statements in the same policy folder as the resource they apply to (e.g., in `prod/app/permissions.yml`)
 - Prefer fully qualified resource names if the resource is defined in a different policy namespace
 
 ---
@@ -71,4 +71,4 @@ This will add the access rule(s) to the specified policy branch (`app` in this c
 
 ## Additional Resources
 
-- 📖 [Official Documentation – `!permit`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-permit.htm)
+- [Official Documentation – `!permit`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-permit.htm)

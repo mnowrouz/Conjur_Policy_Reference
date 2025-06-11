@@ -56,7 +56,7 @@ This ensures that the correct resource in the correct namespace is deleted.
 * Always check for references or dependencies before deleting a resource
 * Track delete operations in source control alongside your policy history
 * Store delete policies in clearly named files (e.g., `delete-users.yml`)
-* Keep delete files in the same folder as the policy they modify (e.g., `policies/webapp/delete-users.yml`)
+* Keep delete files in the same folder as the policy they modify (e.g., `dev/webapp/delete-users.yml`)
 
 ---
 
@@ -71,11 +71,11 @@ conjur policy update -b root -f delete-users.yml
 Or to delete from a nested policy:
 
 ```bash
-conjur policy update -b webapp -f delete-users.yml
+conjur policy update -b dev/webapp -f delete-users.yml
 ```
 
 ---
 
 ## Additional Resources
 
-* 📖 [Official Documentation – `!delete`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-delete.htm)
+* [Official Documentation – `!delete`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-delete.htm)

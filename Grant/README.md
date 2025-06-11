@@ -65,11 +65,11 @@ conjur policy load -b root -f grant-users.yml
 Or for a nested policy:
 
 ```bash
-conjur policy load -b webapp -f grant-users.yml
+conjur policy load -b dev/webapp -f grant-users.yml
 ```
 
 ---
 
 ## Additional Resources
 
-* 📖 [Official Documentation – `!grant`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-grant.htm)
+* [Official Documentation – `!grant`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-grant.htm)

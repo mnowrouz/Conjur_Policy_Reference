@@ -1,5 +1,5 @@
 - !policy
   id: <name>
   owner: !<kind-of-role> <role-name>  
-  body:
+  body:
     <statements>

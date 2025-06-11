@@ -22,12 +22,12 @@ Use `!variable` when you:
 ## Example
 
 ```yaml
-- !variable db/password
+- !variable password
 ```
 
 ### What this does:
 
-- Declares a variable resource called `db/password`
+- Declares a variable resource called `password`
 - This variable can later be assigned a value and accessed via permissions granted with `!permit`
 
 ---
@@ -36,7 +36,7 @@ Use `!variable` when you:
 
 In Conjur, variables represent named secrets. Once a `!variable` is declared, it must be:
 
-1. Assigned a value (e.g., using `conjur variable set -i db/password -v Cyberark1`)
+1. Assigned a value (e.g., using `conjur variable set -i password -v Cyberark1`)
 2. Accessed via authorized roles (e.g., hosts or users granted `read` and `execute` privileges)
 
 If a variable is declared in policy but no value is assigned or no access is granted, it remains inert.
@@ -49,7 +49,8 @@ If a variable is declared in policy but no value is assigned or no access is gra
 
 - CyberArk Privilege Cloud
 - CyberArk PAM Self-Hosted
-- Conjur Synchronizer
+
+Both via the Conjur Synchronizer and the ConjurSync user for Privilege Cloud
 
 These provide centralized management, credential rotation, and access control — all synchronized automatically into Conjur.
 

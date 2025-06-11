@@ -49,7 +49,7 @@ JWT (JSON Web Token) authentication is a common and scalable way to authenticate
 
 * Hosts are declared in policy using `!host`
 * Authentication is handled via a trusted identity provider and a JWT token
-* The `identity-path` in the JWT authenticator configuration refers to the **policy path** where the host resides (e.g., `app` if the host is declared under `app/frontend-service`)
+* The `identity-path` in the JWT authenticator configuration refers to the **policy path** where the host resides (e.g., `dev/webapp` if the host is declared under `dev/webapp`)
 * Host annotations define which claim values the authenticator should match against
 
 ### Example JWT Host Declaration
@@ -94,12 +94,12 @@ conjur policy load -b root -f hosts.yml
 Or for a nested policy:
 
 ```bash
-conjur policy load -b app -f hosts.yml
+conjur policy load -b dev/webapp -f hosts.yml
 ```
 
 ---
 
 ## Additional Resources
 
-* 📖 [Official Documentation – `!host`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-host.htm)
-* 📖 [Using JWT Authentication in Conjur](https://docs.cyberark.com/conjur-cloud/latest/en/Content/Integrations/JWT/jwt-authn-overview.htm)
+* [Official Documentation – `!host`](https://docs.cyberark.com/conjur-cloud/latest/en/content/operations/policy/statement-ref-host.htm)
+* [Using JWT Authentication in Conjur](https://docs.cyberark.com/conjur-cloud/latest/en/Content/Integrations/JWT/jwt-authn-overview.htm)
