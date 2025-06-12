@@ -43,7 +43,7 @@ Each statement specifies an object or rule within the policy's namespace.
 Use the Conjur CLI to manage your policies:
 
 ```bash
-# Create or ammend a policy branch
+# Create or amend a policy branch
 conjur policy load -b <branch-id> -f <file>.yml
 ```
 
