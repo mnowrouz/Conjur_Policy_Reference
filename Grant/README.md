@@ -13,8 +13,8 @@ When a user is granted membership in a group, they inherit all privileges that h
 Use `!grant` when you want to:
 
 * Add a user to a group (e.g., `alice` → `app-users`)
-* Add one group to another group (e.g., `interns` → `developers`)
-* Add a group to a layer for access control in application environments
+* Give a host access to secrets via the Safe’s consumers group
+* Give a host permission to authenticate to Conjur using a defined authenticator
 
 ---
 
