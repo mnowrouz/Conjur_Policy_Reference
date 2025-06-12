@@ -1,0 +1,11 @@
+- !policy
+  id: test
+  body:
+  - !layer test-1
+  - !host 
+    id: my-host
+    annotations:
+      authn/api-key: true
+  - !grant
+    role: !layer test-1
+    member: !host my-host
