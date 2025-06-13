@@ -40,14 +40,11 @@ Use `!policy` when you want to:
 
 * Creates a sub-policy named `webapp`
 * Makes `security-admins` the owner of the new policy
-* Defines a group called `app-users`
-* Creates a user named `alice`
-* Adds `alice` to the `app-users` group
+* Creates a host called backend
 
-Once loaded, these resources can be referenced as:
+Once loaded, the host resource can be referenced as:
 
-* `webapp/app-users`
-* `webapp/alice`
+* `webapp/host`
 
 ---
 
