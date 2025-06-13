@@ -9,7 +9,6 @@ In Conjur, a policy acts as a **namespace-like container** for users, groups, ro
 * Scopes all resources defined within the policy.
 * Prevents naming collisions.
 * Helps organize policies by application, team, or function.
-* Allows fully-qualified references (e.g., `webapp/alice`, `webapp/app-users`).
 
 This makes your secret management structure modular, clean, and maintainable.
 
@@ -33,11 +32,8 @@ Use `!policy` when you want to:
   id: webapp
   owner: !group security-admins
   body:
-    - !group app-users
-    - !user alice
-    - !grant
-      role: !group app-users
-      member: !user alice
+    - !host backend
+
 ```
 
 ### What this does:
