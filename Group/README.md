@@ -49,7 +49,7 @@ Groups make it easy to manage access based on shared responsibilities instead of
 * Use groups to reflect team roles (e.g., `dev-team`, `qa-users`, `admins`)
 * Create separate groups for read-only, admin, and CI/CD access
 * Place group definitions in their own policy file (e.g., `groups.yml`)
-* Keep group files in the same folder as the policy namespace they belong to (e.g., `dev/webapp/groups.yml`)
+* Groups are typically considered enterprise-wide policy. They are some of the few policies that should be loaded to Data (special considerations withstanding)
 
 ---
 
