@@ -46,7 +46,6 @@ The `!revoke` statement removes a **membership relationship** between a role and
 - Use `!revoke` to manage short-lived access for CI/CD pipelines or contractors
 - Keep `!revoke` policies stored alongside related `!grant` or `!group` policies for auditability
 - Regularly review and rotate access using automated revocation as part of your access governance
-- Always use `conjur policy update` when applying a policy containing `!revoke`
 
 ---
 
