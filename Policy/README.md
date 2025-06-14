@@ -68,11 +68,11 @@ This keeps things organized and avoids naming conflicts across your Conjur polic
 ## Best Practices
 
 *  Use short, meaningful policy IDs (e.g., `webapp`, `infra`, `ci`)
-*  Start big and work your way down - e.g. load your app policy under your business unit policy, then load your environment policy under your app policy.
+*  Start big and work your way down - e.g. load your app policy under your business unit policy, then load your environment policy under your app policy
 *  Keep each nested policy small and focused
 *  Avoid deeply nested policies unless necessary
 *  Use version control for all your policy files
-*  Store each policy file in a folder that matches the policy it defines. For example, a policy named webapp should be saved in data/webapp/webapp.yml to reflect its location in the policy tree.
+*  Add your child policy files inside the folder for the parent policy that you are loading it to
 
 ---
 
