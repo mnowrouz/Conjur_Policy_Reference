@@ -31,10 +31,11 @@ Use `!policy` when you want to:
 - !policy
   id: webapp
   owner: !group security-admins
-  annotations:
-    authn/api-key: true
   body:
-    - !host backend
+    - !host 
+      id: backend
+      annotations:
+        authn/api-key: true
 
 ```
 
