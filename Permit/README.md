@@ -42,14 +42,23 @@ The `!permit` statement defines an **access rule** between:
 
 ## Predefined Privilege Values
 
+### Privileges for `!variable` resources
+
 | Privilege  | Description                                                                 |
 |------------|-----------------------------------------------------------------------------|
-| `read`     | Allows reading metadata about a resource (e.g., its ID, annotations).       |
-| `execute`  | Allows retrieving the value of a secret or calling a webservice.            |
-| `update`   | Allows modifying the resource (e.g., rotating a secret or changing a value).|
-| `create`   | Allows creating new resources within the policy namespace.                  |
-| `delete`   | Allows deleting the resource from Conjur.                                   |
-| `grant`    | Allows assigning permissions or memberships to other roles.                 |
+| `read`     | Allows reading metadata about the variable (e.g., ID, annotations).         |
+| `execute`  | Allows retrieving the secret value of the variable.                         |
+| `update`   | Allows changing the variable's value.                                       |
+
+### Privileges for other resource types (e.g., layers, groups, webservices)
+
+| Privilege  | Description                                                                 |
+|------------|-----------------------------------------------------------------------------|
+| `read`     | Allows reading metadata about the resource.                                 |
+| `update`   | Allows modifying the resource or its metadata.                              |
+| `create`   | Allows creating new resources within a policy namespace.                    |
+| `delete`   | Allows deleting the resource.                                               |
+| `grant`    | Allows assigning permissions or group/layer membership to other roles.      |
 
 ---
 
