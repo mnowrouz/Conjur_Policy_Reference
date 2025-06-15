@@ -52,13 +52,12 @@ The `!permit` statement defines an **access rule** between:
 
 ### Privileges for other resource types (e.g., layers, groups, webservices)
 
-| Privilege  | Description                                                                 |
-|------------|-----------------------------------------------------------------------------|
-| `read`     | Allows reading metadata about the resource.                                 |
-| `update`   | Allows modifying the resource or its metadata.                              |
-| `create`   | Allows creating new resources within a policy namespace.                    |
-| `delete`   | Allows deleting the resource.                                               |
-| `grant`    | Allows assigning permissions or group/layer membership to other roles.      |
+| Privilege  | Description                                                                       |
+|------------|-----------------------------------------------------------------------------------|
+| `read`     | Allows reading metadata about the resource.                                       |
+| `update`   | Allows modifying the resource or its metadata.                                    |
+| `create`   | Allows creating new resources within a policy namespace. (applies only to policy) |
+| `use`      | Allows a role to create a dynamic resource from an issuer.                        |
 
 ---
 
