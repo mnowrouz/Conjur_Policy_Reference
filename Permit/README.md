@@ -40,10 +40,16 @@ The `!permit` statement defines an **access rule** between:
 - One or more **privileges** (`read`, `execute`, `update`, `create`, etc.)
 - A **resource** (typically a variable or other object)
 
-In most use cases:
+## Predefined Privilege Values
 
-- `read` allows retrieving metadata about the resource
-- `execute` allows retrieving the secret value (e.g., calling `conjur variable value`)
+| Privilege  | Description                                                                 |
+|------------|-----------------------------------------------------------------------------|
+| `read`     | Allows reading metadata about a resource (e.g., its ID, annotations).       |
+| `execute`  | Allows retrieving the value of a secret or calling a webservice.            |
+| `update`   | Allows modifying the resource (e.g., rotating a secret or changing a value).|
+| `create`   | Allows creating new resources within the policy namespace.                  |
+| `delete`   | Allows deleting the resource from Conjur.                                   |
+| `grant`    | Allows assigning permissions or memberships to other roles.                 |
 
 ---
 
